@@ -1,0 +1,175 @@
+/* Main styles */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+/* Variables */
+
+:root {
+  --color-win: #06D6A0;
+  --color-lose: #EF476F;
+  --color-start: #00509d;
+  --color-neutral: #24030B;
+  --color-neutral-light: #D2D2D2;
+  --color-keys: #ffd500;
+  --color-keys-light: #00509d;
+  --font-size-large: 60px;
+  --font-size-medium: 20px;
+  --transition: all .5s ease-in-out;
+}
+
+/* main */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  justify-content: space-evenly;
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+  background-color: #FFF9EC;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+li, ol, ul {
+  padding: 0;
+  display: inline-block;
+}
+
+h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: var(--font-size-large);
+  margin: 0;
+}
+
+button {
+  margin: 6px;
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  color: var(--color-keys);
+  font-size: var(--font-size-medium);
+  font-family: 'JetBrains Mono', monospace;
+  background-color: var(--color-keys-light);
+  border-radius: 5px;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  max-height: 900px;
+  text-align: center;
+}
+
+.section {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Title */
+
+.header {
+  color: var(--color-start);
+}
+
+/* Phrase */
+
+.letter {
+  font-size: var(--font-size-medium);
+  height: 65px;
+  width: 65px;
+  padding: 20px 1px 0 1px;
+  margin-right: 2px;
+  color: transparent;
+  background: var(--color-neutral-light);
+  border-radius: 5px;
+}
+
+.space {
+  width: 15px;
+}
+
+.show {
+  color: #000;
+  background-color: #FFD166;
+  transition:  step-start .1s ease-in;
+
+}
+
+/* Keyboard */
+
+.keyrow {
+  display: flex;
+  justify-content: center;
+}
+
+.chosen {
+  background: var(--color-neutral);
+  border-radius: 5px;
+  font-size: var(--font-size-medium);
+  color: #FFFFFF;
+}
+
+.btn__reset {
+  padding: 8px;
+  margin: 50px auto;
+  background: #f8edeb;
+  border-radius: 5px;
+  font-size: var(--font-size-medium);
+}
+
+.btn {
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #FFD166;
+  color: white;
+}
+
+/* Overlay */
+
+#overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  color: #FFFFFF;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+}
+
+.title {
+  color: #FFF;
+}
+
+.start {
+  background-color: var(--color-start);
+}
+
+.start a {
+  color: var(--color-win);
+}
+
+.win {
+  background-color: var(--color-win);
+}
+
+.win a {
+  color: var(--color-win);
+}
+
+.lose {
+  background-color: var(--color-lose);
+}
+
+.lose a {
+  color: var(--color-lose);
+}
